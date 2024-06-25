@@ -1,7 +1,7 @@
 # VamboAI
 
 [![Pub Version](https://img.shields.io/pub/v/vamboai)](https://pub.dev/packages/vamboai)
-[![GitHub](https://img.shields.io/github/license/iamngoni/vamboai)](https://github.com/iamngoni/vamboai/blob/main/LICENSE)
+[![GitHub](https://img.shields.io/github/license/iamngoni/vamboai)](https://github.com/iamngoni/vamboai/blob/master/LICENSE)
 [![Twitter/X](https://img.shields.io/twitter/url?label=iamngoni_&style=social&url=https%3A%2F%2Ftwitter.com%2Fiamngoni_)](https://twitter.com/iamngoni_)
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
