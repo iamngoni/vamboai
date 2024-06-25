@@ -1,6 +1,6 @@
 name: vamboai
-description: "Vambo AI Flutter SDK"
-version: 0.0.1
+description: "VamboAI is a comprehensive Dart package designed to provide seamless integration with the Vambo AI API"
+version: 0.0.2
 homepage: https://github.com/iamngoni/vamboai
 repository: https://github.com/iamngoni/vamboai
 

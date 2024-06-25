@@ -74,7 +74,7 @@ try {
 
 ## Contributing
 
-Contributions to the Dart Promise library are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
+Contributions to the VamboAI library are welcome. Please feel free to fork the repository, make your changes, and submit a pull request.
 
 ## License
 
