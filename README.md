@@ -14,6 +14,14 @@
 
 VamboAI is a Dart package that provides access to the Vambo AI API for language identification and translation. This package allows you to interact with the Vambo AI API in a simple and efficient manner.
 
+## API Key
+
+To use the Vambo AI API, you need to obtain an API key. Please visit the [Vambo AI Studio](https://studio.vambo.ai/) to create an account and obtain your API key.
+
+## Supported Languages
+
+Please refer to the [Vambo AI API documentation](https://docs.vambo.ai/languages/introduction) for a list of supported languages.
+
 ## Features
 
 - Identify the language of a given text.
