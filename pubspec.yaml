@@ -1,0 +1,13 @@
+name: vamboai
+description: "Vambo AI Flutter SDK"
+version: 0.0.1
+homepage: https://github.com/iamngoni/vamboai
+repository: https://github.com/iamngoni/vamboai
+
+environment:
+  sdk: '>=3.5.0-160.0.dev <4.0.0'
+
+dev_dependencies:
+  mockito: ^5.4.4
+  test: 1.25.7
+  very_good_analysis: ^5.0.1
