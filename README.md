@@ -65,7 +65,7 @@ void main() async {
     from: Language.english,
     to: Language.french,
   );
-  print('Translation: ${translateResponse.output}');
+  print('Translation: ${tResponse.output}');
 }
 ```
 
