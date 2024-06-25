@@ -1,9 +1,8 @@
-# Dart Promise
+# VamboAI
 
-<img src="https://img.shields.io/pub/v/dart_promise?style=for-the-badge">
-<img src="https://img.shields.io/github/last-commit/iamngoni/dart_promise">
-<img src="https://img.shields.io/twitter/url?label=iamngoni_&style=social&url=https%3A%2F%2Ftwitter.com%2Fiamngoni_">
-
+[![Pub Version](https://img.shields.io/pub/v/vamboai)](https://pub.dev/packages/vamboai)
+[![GitHub](https://img.shields.io/github/license/iamngoni/vamboai)](https://github.com/iamngoni/vamboai/blob/main/LICENSE)
+[![Twitter/X](https://img.shields.io/twitter/url?label=iamngoni_&style=social&url=https%3A%2F%2Ftwitter.com%2Fiamngoni_)](https://twitter.com/iamngoni_)
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
 
@@ -13,53 +12,65 @@
 [very_good_analysis_link]: https://pub.dev/packages/very_good_analysis
 
 
-This library provides a `Promise` class that emulates JavaScript-like promise functionality in Dart. It aims to simplify asynchronous programming in Dart, offering an alternative way to handle asynchronous operations with more control over error handling and chaining.
+VamboAI is a Dart package that provides access to the Vambo AI API for language identification and translation. This package allows you to interact with the Vambo AI API in a simple and efficient manner.
 
 ## Features
 
-- **Promise Creation**: Easily create promises that encapsulate asynchronous operations.
-- **Error Handling**: Robust error handling using `catchError` method, which allows continuation of promise chains even when errors occur.
-- **Flexible Error Handlers**: Supports both synchronous and asynchronous error handlers through `FutureOr<T>`.
+- Identify the language of a given text.
+- Translate text between various supported languages.
+- Supports a wide range of languages commonly used in Africa and beyond.
 
-## Getting Started
+## Installation
 
-To get started with the Dart Promise library, add it to your Dart project by including it in your `pubspec.yaml` file under dependencies:
+Add `vamboai` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  dart_promise: ^0.0.1+1
+  vamboai: ^0.0.1
+ ```
+
+Then run:
+```sh
+dart pub get
 ```
 
 ## Usage
 
-Here’s how you can use the Promise class to perform asynchronous operations and handle errors gracefully:
-
+Import the vamboai package:
 ```dart
-import 'package:dart_promise/dart_promise.dart';
+import 'package:vamboai/vamboai.dart';
+```
 
-void main() {
-  // Create a new promise
-  Promise<String> myPromise = Promise<String>((resolve, reject) {
-    // Simulate an asynchronous operation like fetching data from a server
-    Future.delayed(Duration(seconds: 1), () {
-      resolve("Data fetched successfully!");
-      // Uncomment the next line to simulate an error
-      // reject("Failed to fetch data");
-    });
-  });
+Create an instance of VamboAI using your API key:
+```dart
+void main() async {
+  final ai = VamboAI.fromAPIKey('your_api_key');
 
-  // Using the promise
-  myPromise
-    .then((data) => print(data))
-    .catchError((error) => print("Error: $error"));
+  // Identify the language of a given text
+  final response = await ai.identify('Hello, how are you?');
+  print('Primary Language: ${response.primary.name}');
+  print('Additional Languages: ${response.additional.map((lang) => lang.name).join(', ')}');
+
+  // Translate text from English to French
+  final tResponse = await ai.translate(
+    'Hello, how are you?',
+    from: Language.english,
+    to: Language.french,
+  );
+  print('Translation: ${translateResponse.output}');
 }
 ```
 
-## API Reference
+## Error Handling
+All errors from the Vambo AI API are thrown as `VamboException`.
 
-- `Promise<T>(Executor<T> executor)`: Constructor to create a new promise. The executor function takes two parameters: resolve and reject which are used to settle the promise.
-- `Future<T> catchError(OnRejected<T> onRejected)`: Method to handle errors in the promise chain. onRejected can be either a synchronous or asynchronous function.
-- `Future<R> then<R>(OnFulfilled<T, R> onFulfilled)`: Method to handle successful completion of the promise chain. onFulfilled can be either a synchronous or asynchronous function.
+```dart
+try {
+  final response = await vambo.identify('Some text');
+} catch (e) {
+  print(e); // Handle the exception
+}
+```
 
 ## Contributing
 

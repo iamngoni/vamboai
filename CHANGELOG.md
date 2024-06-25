@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Implement the basic functionality of the package i.e. identify and translate functionalities.
