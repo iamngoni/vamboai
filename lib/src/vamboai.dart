@@ -56,11 +56,11 @@ class VamboAI {
         final responseBody = await response.transform(utf8.decoder).join();
         final data = json.decode(responseBody);
         return VamboIdentifyResponse.fromJson(data as Map<String, dynamic>);
-      else if (response.statusCode == 422) {
+      } else if (response.statusCode == 422) {
         // Could be unsupported language or something else throw with detail
         final responseBody = await response.transform(utf8.decoder).join();
         final data = json.decode(responseBody);
-        throw VamboException(data['detail']);
+        throw VamboException(data['detail'].toString());
       } else {
         throw VamboException('Failed to identify text');
       }
@@ -95,11 +95,11 @@ class VamboAI {
         final responseBody = await response.transform(utf8.decoder).join();
         final data = json.decode(responseBody);
         return VamboResponse.fromJson(data as Map<String, dynamic>);
-      else if (response.statusCode == 422) {
+      } else if (response.statusCode == 422) {
         // Could be unsupported language or something else throw with detail
         final responseBody = await response.transform(utf8.decoder).join();
         final data = json.decode(responseBody);
-        throw VamboException(data['detail']);
+        throw VamboException(data['detail'].toString());
       } else {
         throw VamboException('Failed to translate text');
       }
