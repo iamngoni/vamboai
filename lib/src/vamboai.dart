@@ -41,7 +41,8 @@ class VamboAI {
 
   /// Identifies the language of the given [input] text using the Vambo AI API.
   ///
-  /// Returns a [VamboIdentifyResponse] object containing the identification result.
+  /// Returns a [VamboIdentifyResponse] object containing the identification
+  /// result.
   ///
   /// Throws a [VamboException] if the API request fails.
   Future<VamboIdentifyResponse> identify(String input) async {
@@ -70,7 +71,8 @@ class VamboAI {
     }
   }
 
-  /// Translates the given [input] text from the source language [from] to the target language [to] using the Vambo AI API.
+  /// Translates the given [input] text from the source language [from] to the
+  ///  target language [to] using the Vambo AI API.
   ///
   /// Returns a [VamboResponse] object containing the translation result.
   ///
@@ -94,12 +96,12 @@ class VamboAI {
 
       if (response.statusCode == 200) {
         final responseBody = await response.transform(utf8.decoder).join();
-        final data = json.decode(responseBody);
-        return VamboResponse.fromJson(data as Map<String, dynamic>);
+        final data = json.decode(responseBody) as Map<String, dynamic>;
+        return VamboResponse.fromJson(data);
       } else if (response.statusCode == 422) {
         // Could be unsupported language or something else throw with detail
         final responseBody = await response.transform(utf8.decoder).join();
-        final data = json.decode(responseBody);
+        final data = json.decode(responseBody) as Map<String, dynamic>;
         throw VamboException(data['detail'].toString());
       } else {
         throw VamboException('Failed to translate text');

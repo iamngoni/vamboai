@@ -6,11 +6,15 @@
 //  Copyright (c) 2024 Codecraft Solutions. All rights reserved.
 //
 
+import 'package:meta/meta.dart';
+
 /// A class representing a language with its name, script, and ISO code.
-final class Lang {
+@immutable
+class Lang {
   /// Constructs a [Lang] instance with the given [name], [script], and [code].
   ///
-  /// The [name] and [code] parameters are required. The [script] parameter is optional.
+  /// The [name] and [code] parameters are required. The [script] parameter is
+  ///  optional.
   const Lang({required this.name, required this.code, this.script});
 
   /// Creates a [Lang] instance from a JSON object.
@@ -54,7 +58,8 @@ final class Lang {
 
   /// Checks if this [Lang] instance is equal to another object.
   ///
-  /// Two [Lang] instances are considered equal if their [name], [script], and [code] are the same.
+  /// Two [Lang] instances are considered equal if their [name], [script],
+  ///  and [code] are the same.
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -67,7 +72,8 @@ final class Lang {
 
   /// Returns a hash code for this [Lang] instance.
   ///
-  /// The hash code is computed based on the [name], [script], and [code] properties.
+  /// The hash code is computed based on the [name], [script], and [code]
+  ///  properties.
   @override
   int get hashCode {
     return name.hashCode ^ script.hashCode ^ code.hashCode;

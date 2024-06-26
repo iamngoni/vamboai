@@ -6,11 +6,15 @@
 //  Copyright (c) 2024 Codecraft Solutions. All rights reserved.
 //
 
+import 'package:meta/meta.dart';
+
 import 'lang.dart';
 
 /// A class representing the response from the Vambo AI identify API.
+@immutable
 final class VamboIdentifyResponse {
-  /// Constructs a [VamboIdentifyResponse] with the given [primary] language and [additional] languages.
+  /// Constructs a [VamboIdentifyResponse] with the given [primary] language
+  /// and [additional] languages.
   const VamboIdentifyResponse({
     required this.primary,
     required this.additional,
@@ -18,7 +22,8 @@ final class VamboIdentifyResponse {
 
   /// Creates a [VamboIdentifyResponse] instance from a JSON map.
   ///
-  /// The [json] parameter must contain the keys 'primary' and 'additional' with appropriate values.
+  /// The [json] parameter must contain the keys 'primary' and 'additional'
+  ///  with appropriate values.
   factory VamboIdentifyResponse.fromJson(Map<String, dynamic> json) {
     return VamboIdentifyResponse(
       primary: Lang.fromJson(json['primary'] as Map<String, dynamic>),
@@ -37,7 +42,8 @@ final class VamboIdentifyResponse {
 
   /// Converts the [VamboIdentifyResponse] instance to a JSON map.
   ///
-  /// Returns a map with keys 'primary' and 'additional' representing the languages.
+  /// Returns a map with keys 'primary' and 'additional' representing the
+  ///  languages.
   Map<String, dynamic> toJson() {
     return {
       'primary': primary.toJson(),
@@ -47,7 +53,8 @@ final class VamboIdentifyResponse {
 
   /// Returns a string representation of the [VamboIdentifyResponse].
   ///
-  /// The string representation is the same as the primary language's string representation.
+  /// The string representation is the same as the primary language's string
+  ///  representation.
   @override
   String toString() {
     return primary.toString();
@@ -55,7 +62,8 @@ final class VamboIdentifyResponse {
 
   /// Compares this [VamboIdentifyResponse] with another for equality.
   ///
-  /// Two [VamboIdentifyResponse] instances are equal if their [primary] and [additional] fields are equal.
+  /// Two [VamboIdentifyResponse] instances are equal if their [primary] and
+  /// [additional] fields are equal.
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;

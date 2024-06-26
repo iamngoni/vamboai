@@ -1,5 +1,7 @@
 ## 1.0.1
 
+* fix: check if empty key is supplied
+
 ## 1.0.0
 
 * Release & update README

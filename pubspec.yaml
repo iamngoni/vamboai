@@ -1,11 +1,14 @@
 name: vamboai
 description: "VamboAI is a comprehensive Dart package designed to provide seamless integration with the Vambo AI API"
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/iamngoni/vamboai
 repository: https://github.com/iamngoni/vamboai
 
 environment:
   sdk: '>=3.5.0-160.0.dev <4.0.0'
+
+dependencies:
+  meta: ^1.15.0
 
 dev_dependencies:
   mockito: ^5.4.4

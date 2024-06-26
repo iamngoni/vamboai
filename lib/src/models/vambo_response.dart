@@ -6,7 +6,10 @@
 //  Copyright (c) 2024 Codecraft Solutions. All rights reserved.
 //
 
+import 'package:meta/meta.dart';
+
 /// A class representing the response from the Vambo AI API.
+@immutable
 final class VamboResponse {
   /// Constructs a [VamboResponse] with the given [output].
   const VamboResponse({required this.output});
@@ -42,7 +45,8 @@ final class VamboResponse {
 
   /// Compares this [VamboResponse] with another for equality.
   ///
-  /// Two [VamboResponse] instances are equal if their [output] fields are equal.
+  /// Two [VamboResponse] instances are equal if their [output] fields are
+  ///  equal.
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
