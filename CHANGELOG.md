@@ -1,6 +1,7 @@
 ## 1.0.1
 
 * fix: check if empty key is supplied
+* fix: dart sdk constraint to stable channel
 
 ## 1.0.0
 
