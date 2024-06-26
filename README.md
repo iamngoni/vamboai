@@ -1,10 +1,16 @@
 # VamboAI
 
 [![Pub Version](https://img.shields.io/pub/v/vamboai)](https://pub.dev/packages/vamboai)
+[![Pub Likes](https://img.shields.io/pub/likes/vamboai)](https://pub.dev/packages/vamboai)
+[![Pub Points](https://img.shields.io/pub/points/vamboai)](https://pub.dev/packages/vamboai/score)
+[![Pub Popularity](https://img.shields.io/pub/popularity/vamboai)](https://pub.dev/packages/vamboai/score)
+[![Github commit activity](https://img.shields.io/github/commit-activity/m/iamngoni/vamboai)](https://github.com/iamngoni/vamboai)
+[![Github contributors](https://img.shields.io/github/contributors/iamngoni/vamboai)](https://github.com/iamngoni/vamboai)
+[![Github stars](https://img.shields.io/github/stars/iamngoni/vamboai?style=social)](https://github.com/iamngoni/vamboai)
 [![GitHub](https://img.shields.io/github/license/iamngoni/vamboai)](https://github.com/iamngoni/vamboai/blob/master/LICENSE)
-[![Twitter/X](https://img.shields.io/twitter/url?label=iamngoni_&style=social&url=https%3A%2F%2Ftwitter.com%2Fiamngoni_)](https://twitter.com/iamngoni_)
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
+[![Twitter/X](https://img.shields.io/twitter/url?label=iamngoni_&style=social&url=https%3A%2F%2Ftwitter.com%2Fiamngoni_)](https://twitter.com/iamngoni_)
 
 [license_badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [license_link]: https://opensource.org/licenses/MIT
