@@ -1,5 +1,5 @@
 name: vamboai
-description: "VamboAI is a comprehensive Dart package designed to provide seamless integration with the Vambo AI API"
+description: "VamboAI is a comprehensive Dart package designed to provide seamless integration with the Vambo AI API. It allows developers to leverage powerful language identification and translation capabilities in their applications. This package supports a wide range of languages, making it an essential tool for applications targeting diverse linguistic audiences, particularly those focusing on African languages."
 version: 1.0.1
 homepage: https://github.com/iamngoni/vamboai
 repository: https://github.com/iamngoni/vamboai
