@@ -26,6 +26,7 @@ class VamboAI {
   /// Factory constructor to create an instance of [VamboAI] using the provided
   /// [apiKey].
   factory VamboAI.fromAPIKey(String apiKey) {
+    assert(apiKey.isNotEmpty, 'API key cannot be null or empty');
     return VamboAI._(apiKey);
   }
 
@@ -54,12 +55,12 @@ class VamboAI {
 
       if (response.statusCode == 200) {
         final responseBody = await response.transform(utf8.decoder).join();
-        final data = json.decode(responseBody);
-        return VamboIdentifyResponse.fromJson(data as Map<String, dynamic>);
+        final data = json.decode(responseBody) as Map<String, dynamic>;
+        return VamboIdentifyResponse.fromJson(data);
       } else if (response.statusCode == 422) {
         // Could be unsupported language or something else throw with detail
         final responseBody = await response.transform(utf8.decoder).join();
-        final data = json.decode(responseBody);
+        final data = json.decode(responseBody) as Map<String, dynamic>;
         throw VamboException(data['detail'].toString());
       } else {
         throw VamboException('Failed to identify text');
