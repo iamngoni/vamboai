@@ -5,7 +5,7 @@ homepage: https://github.com/iamngoni/vamboai
 repository: https://github.com/iamngoni/vamboai
 
 environment:
-  sdk: '>=3.5.0-160.0.dev <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   meta: ^1.15.0
